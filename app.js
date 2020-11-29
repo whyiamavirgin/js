@@ -1,3 +1,5 @@
+// ! 1 Часть
+
 // ! 1 Блок - Переменные 
 
 var firstName = 'Tim' // не использовать  var
@@ -93,3 +95,92 @@ console.log(num1 === num2) // проверяет не только по знач
 // ! 7 Блок - Булевая логика
 // * можно несколько раз использовать оператор отрицания : 
 // * !true = false, !!true = true
+
+// ! 8 Блок - Функции
+
+function calculateAge(year) {
+    return 2020 - year
+}
+
+console.log(calculateAge(1993))
+console.log(calculateAge(2019))
+console.log(calculateAge(1999))
+
+function logInfoAbout(name, year) {
+    const age = calculateAge(year)
+
+    if (age > 0) {
+    console.log('Человек по имени: ' + name + ' сейчас имеет возраст ' + age)
+    } else {
+        console.log('Вообщето-это уже будущее!')
+    }
+
+}
+
+logInfoAbout('Тим', 2003)
+logInfoAbout('Елена', 1995)
+logInfoAbout('Елена', 2222)
+
+// ! 9 Блок - Массивы 
+
+const cars = ['Mazda', 'Mercedes', 'Ford'] // массив
+// const cars2 = new Array('Mazda', 'Mercedes', 'Ford') // ! ТАК ПИСАТЬ НЕ НАДО
+console.log(cars)
+console.log(cars.length) // выводит длину массива
+console.log(cars[1])
+console.log(cars[0])
+console.log(cars[2])
+cars[0] = 'Porsche' // Меняем первый элемент в массиве на новый
+cars[3] = 'Mazda' // добавляем новый элемент в массив. Статический индекс (3)
+cars[cars.length] = 'BMW' // Динамический индекс (с помощью lenght)
+console.log(cars)
+
+// ! 10 Блок - Циклы
+
+const cars2 = ['Mazda', 'Mercedes', 'Ford']
+cars2[cars2.length] = 'Porsche'
+
+
+for (let i = 0; i < cars2.length; i++) {
+    const car = cars2[i]
+    console.log(car)
+}
+
+console.log(' ')
+
+// * Новый способ прохода по массиву (for .. of ..)
+
+for (let car2 of cars2) {
+    console.log(car2)
+}
+
+// ! 11 Блок - Объекты
+
+// * Синтаксис создания объектов
+
+const person = {
+    firstName2: 'Tim',
+    lastName2: 'Adamiya',
+    year: 2003,
+    languages: ['Ru', 'En', 'Tu', 'De'],
+    hasGF: false, 
+    greet: function() {
+        console.log('greet from person')
+    }
+}
+
+console.log(person)
+// * Есть несколько разных способов обращения к объекту
+console.log(person.firstName2)
+console.log(person['lastName2']) // Второй способ обращения
+const key = 'languages'
+console.log(person[key]) // выводит массив languages из объекта person 
+
+person.hasGF = true // можно изменять значения внутри объекта
+console.log(person.hasGF)
+person.isProgrammer2 = true // Можно добавлять новые значения
+console.log(person.isProgrammer2) 
+
+person.greet()
+
+// ! 2 Часть - app2.js
