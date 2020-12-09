@@ -90,3 +90,4 @@ console.log(logWithLastName('Izmailov'))
 
 // ! Конец 
 // Следующий урок - массивы
+// ! 5 часть - app5.js
